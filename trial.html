@@ -193,11 +193,27 @@ marquee{
 		font-family: 'Algerian',serif;
 
 }
-	</style>
+button{
+	background-color: lightgreen;
+	color: red;
+	transition-duration: 0.4s;
+	font-size: 20px;
+	border-radius: 10px;
 }
+button:hover{
+	background-color: pink;
+	color: lightgreen;
+}
+
+
+
+	</style>
+
+
+
 </head>
 <body>
-
+<button style="align-self: left;margin-bottom: 500px;" onclick="myFunction()">Click</button>
 
 <div id="main2">
 <span>
@@ -271,7 +287,7 @@ marquee{
 	<img src="24.jpg">
 </span>
 <audio autoplay loop> 
-	<source src="bgm.mp3" type="audio/mp3">
+	<source src="bgm.mp3" type="audio/mp3" id="audio1">
 </audio>
 
 
@@ -285,15 +301,19 @@ marquee{
 
 <SCRIPT language=JavaScript>
 
-//<!-- http://www.spacegun.co.uk -->
+<!-- http://www.spacegun.co.uk -->
 
-//var message = "function disabled";
+var message = "function disabled";
 
-//function rtclickcheck(keyp){ if (navigator.appName == "Netscape" && keyp.which == 3){ alert(message); return false; }
+function rtclickcheck(keyp){ if (navigator.appName == "Netscape" && keyp.which == 3){ alert(message); return false; }
 
-//if (navigator.appVersion.indexOf("MSIE") != -1 && event.button == 2) { alert(message); return false; } }
+if (navigator.appVersion.indexOf("MSIE") != -1 && event.button == 2) { alert(message); return false; } }
 
-//document.onmousedown = rtclickcheck;
+document.onmousedown = rtclickcheck;
 
+function myFunction(){
+	var x=document.getElementById('audio1');
+	x.play;
+}
 </SCRIPT>
 </html>
